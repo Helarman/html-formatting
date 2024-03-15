@@ -30,7 +30,7 @@ const Tag = ({ tag }: { tag: TagProps }) => {
 
             {isOpen && tag.children && tag.children.map((child: TagChildrenProps) => (
                 child.type === 'text' ?
-                    <p className="ml-5">{child.content}</p>
+                    <p className="ml-11">{child.content}</p>
                     :
                     <SubTag child={child} />
 
