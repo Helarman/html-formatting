@@ -32,7 +32,7 @@ const SubTag = ({ child }: { child: TagChildrenProps }) => {
 
                 {isOpen && child.children && child.children.map((child: TagChildrenProps) => (
                     child.type === 'text' ?
-                        <p className="ml-5">{child.content}</p>
+                        <p className="ml-11">{child.content}</p>
                         :
                         <SubTag child={child} />
 
