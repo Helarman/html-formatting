@@ -4,7 +4,7 @@ import Renderer from './components/Renderer/HtmlRenderer';
 
 function App() {
   return (
-    <div className="w-full h-screen flex justify-center items-center px-16">
+    <div className="w-full flex justify-center items-center px-3 md:px-16">
         <Renderer/>
     </div>
   );

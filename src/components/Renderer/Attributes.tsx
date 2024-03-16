@@ -4,20 +4,28 @@ export interface AttributeProps {
 }
 
 
-const Atrtributes = ({ attrs }: { attrs: AttributeProps[] }) => {
+interface AttributesProps {
+    attrs: AttributeProps[],
+    voidElement?: boolean,
+}
+
+const Atrtributes: React.FC<AttributesProps> = ({ attrs, voidElement }) => {
     return (
-        <>
-            {attrs && attrs.map(({ name, value }) => (
-                <p className="ml-1">
-                    <span className="text-black">
-                        {name}=
+        <div className="flex flex-row">
+            <p>
+                {attrs && attrs.map(({ name, value }) => (
+                    <span className="ml-1">
+                        <span className="text-black">
+                            {name}=
+                        </span>
+                        <span className="text-red-500">
+                            "{value}"
+                        </span>
                     </span>
-                    <span className="text-red-500">
-                        "{value}"
-                    </span>
-                </p>
-            ))}
-        </>
+                ))}
+                {!voidElement ? '>' : '/>'}
+            </p>
+        </div>
     )
 }
 
