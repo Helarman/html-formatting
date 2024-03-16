@@ -41,11 +41,11 @@ const Tag = ({ tag }: { tag: TagProps }) => {
                 </span>
 
             }
-            <span className={isOpen ? 'ml-6' : ''}>
+            <p className={isOpen ? 'ml-6' : ''}>
                 {`</`}
                 <span className="text-green-500">{tag.name}</span>
                 {`>`}
-            </span>
+            </p>
         </div>
     )
 }
